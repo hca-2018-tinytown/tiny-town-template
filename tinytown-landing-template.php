@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Tiny Town Landing Page
+*/
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>TinyTown</title>
-  <link rel="stylesheet" href="tinytown-style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <nav>
@@ -33,24 +38,17 @@
     </div>
 
     <div class="map-grid">
-      <div class= "box">
-        <img src="images/ttshop-color-TNpediatrics.jpg" alt="Tennesee Pediatrics Logo">
+      <?php
+      $pages = get_posts(array( 'post_type' => 'tinytown' ));
+
+      foreach($pages as $page):
+      ?>
+      <div class="box">
+        <img src="<?php the_post_thumbnail(); ?>" alt="<?php the_post_title(); ?>">
       </div>
-      <div class= "box">
-        <img src="images/ttshop-color-postoffice.jpg" alt="Post Office Logo">
-      </div>
-      <div class= "box">
-        <img src="images/ttshop-color-publix.jpg" alt="Publix Logo">
-      </div>
-      <div class= "box">
-        <img src="images/ttshop-color-homedepot.jpg" alt="The Home Depot">
-      </div>
-      <div class= "box">
-        <img src="images/ttshop-color-tinytown.jpg" alt="Tiny Town Logo">
-      </div>
-      <div class= "box">
-        <img src="images/ttshop-color-music.jpg" alt="Music Loco">
-      </div>
+      <?php
+      endforeach;
+      ?>
     </div>
 
     <footer class="email-footer">
