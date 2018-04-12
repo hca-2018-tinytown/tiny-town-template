@@ -1,0 +1,70 @@
+
+nav{
+  width: 100vw;
+  height: 3rem;
+  background: lightgray;;
+}
+
+header{
+  width: 100vw;
+  height: 25vh;
+  border: solid 1px gray;
+}
+
+.container{
+  padding: 1rem;
+}
+
+h1{
+  color: #8dc740;
+  font-family: 'Times New Roman', serif;
+  font-weight: normal;
+  font-size: 2.5rem;
+
+}
+
+h4{
+  color:#3CB000;
+}
+
+h4, p{
+  font-family: Helvetica, sans-serif;
+}
+
+.title{
+  border-bottom: 2px solid #8dc740;;
+}
+
+.title >  .title-texbox{
+  width: 60vw;
+}
+.map-grid{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  
+}
+
+.map-grid > .box, img{
+  margin: 0.1rem;
+  height: 19vh;
+  width: 40vw;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .map-grid {
+      max-width: 65vw;
+    }
+    .map-grid > .box, img{
+      width: 30vw;
+      height: 35vh;
+    }
+}
+.email-footer{
+  padding-bottom: 1rem;
+}
