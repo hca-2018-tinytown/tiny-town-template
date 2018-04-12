@@ -48,9 +48,21 @@ get_header();
                     </div>
                 <?php endwhile; ?>
             </div>
-
             <div>
-                <?php echo do_shortcode('emma_form'); ?>
+				<footer class="email-footer">
+					<h4>Take home tinytown! Sign up for email updates!</h4>
+					<!-- modal starts here -->
+					<div id="emailModal" class="modal">
+						<span id="close-btn">&times;</span>
+						<div class = "modal-content">
+							<h5 class = "modal-text">Take Tiny Town Home With You</h5>
+							<p>Sign up to recieve updates from the discovery center</p>
+							<?php echo do_shortcode('[emma_form]'); ?>
+							<p id="no-thanks">No,thank you, take me to Tiny Town</p>
+						</div>
+					</div>
+					<!-- modal ends here -->
+				</footer>
             </div>
         </div>
     </div><!-- #primary -->
