@@ -53,11 +53,6 @@ Template Name: Tiny Town Landing Page
       wp_reset_postdata();
       ?>
     </div>
-
-    <footer class="email-footer">
-      <h4>Take home tinytown! Sign up for email updates!</h4>
-      <?php echo do_shortcode('[emma_form]'); ?>
-    </footer>
 </div>
   
 </body>
