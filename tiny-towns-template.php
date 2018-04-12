@@ -48,6 +48,10 @@ get_header();
                     </div>
                 <?php endwhile; ?>
             </div>
+
+            <div>
+                <?php echo do_shortcode('emma_form'); ?>
+            </div>
         </div>
     </div><!-- #primary -->
     
