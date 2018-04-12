@@ -10,7 +10,8 @@ Template Name: Tiny Town Landing Page
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>TinyTown</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/tinytown-style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
   <nav>
@@ -39,20 +40,23 @@ Template Name: Tiny Town Landing Page
 
     <div class="map-grid">
       <?php
-      $pages = get_posts(array( 'post_type' => 'tinytown' ));
+      $posts = get_posts(array( 'post_type' => 'tinytown' ));
 
-      foreach($pages as $page):
+      foreach($posts as $post):
+        setup_postdata($post);
       ?>
       <div class="box">
-        <img src="<?php the_post_thumbnail(); ?>" alt="<?php the_post_title(); ?>">
+        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
       </div>
       <?php
       endforeach;
+      wp_reset_postdata();
       ?>
     </div>
 
     <footer class="email-footer">
       <h4>Take home tinytown! Sign up for email updates!</h4>
+      <?php echo do_shortcode('[emma_form]'); ?>
     </footer>
 </div>
   
