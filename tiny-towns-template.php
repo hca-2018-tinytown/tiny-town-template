@@ -1,26 +1,56 @@
 <?php
 /*
-Template Name: Tiny Towns
+Template Name: Tiny Town
 */
 
 get_header();
 ?>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>TinyTown</title>
+        <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/tinytown-style.css">
+    </head>
+    
+    <div id="primary">
 
-		<div id="primary">
-			<div class="homeSecond">
-                <h1>Hello World</h1>
+        <div class="container">
+
+            <div class="title">
+                <div class="title-textbox">
+                    <h1><?php echo the_title(); ?></h1>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <?php if(get_field('tiny_town_headline')): ?>
+                    <h4><?php echo the_field('tiny_town_headline'); ?></h4>
+                <?php endif; ?>
+
+                <?php if(get_field('tiny_town_content')): ?>
+                    <p><?php echo the_field('tiny_town_content'); ?></p>
+                <?php endif; ?>
+            </div>
+
+            <div class="map-grid">
                 <?php $loop = new WP_Query( array( 'post_type' => 'tinytown', 'posts_per_page' => 10 ) ); ?>
 
-                <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                <?php 
+                    while ( $loop->have_posts() ) : $loop->the_post();
+                    $featured_img_url = get_the_post_thumbnail_url(); 
+                ?>
 
-                    <?php the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' ); ?>
-
-                    <div class="entry-content">
-                        <?php the_content(); ?>
+                    <div class="box">
+                        <a href=<?php echo '"' . get_permalink() . '"'?>>
+                            <img src=<?php echo '"' . $featured_img_url . '"'; ?> alt="<?php the_title(); ?>">
+                        </a>
                     </div>
                 <?php endwhile; ?>
-			</div>
-		</div><!-- #primary -->
+            </div>
+        </div>
+    </div><!-- #primary -->
+    
 	<script type="text/javascript">
 	$(document).ready(function () {
 		$('.lcp_catlist').cycle({
@@ -48,8 +78,6 @@ get_header();
 	});
     });
 	</script>
-<div class="firetruckhome"><span class="firetruckleft"></span></div>
-
 <?php 
 get_footer();
 ?>
