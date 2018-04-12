@@ -38,19 +38,18 @@ h4, p{
 .title >  .title-texbox{
   width: 60vw;
 }
+
 .map-grid{
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
+  justify-content: space-around;
   margin: auto;
-  
 }
 
 .map-grid > .box, img{
   margin: 0.1rem;
-  height: 19vh;
   width: 40vw;
+  align-self: center;
 }
 
 
@@ -62,7 +61,6 @@ h4, p{
     }
     .map-grid > .box, img{
       width: 30vw;
-      height: 35vh;
     }
 }
 .email-footer{
