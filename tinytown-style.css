@@ -168,7 +168,7 @@ h5{
 
 #no-thanks{
   color:#3BB000;
-  margin-top: 3rem;
+  margin-top: 3rem !important;
   font-size: 1.05rem;
   
 }
@@ -231,7 +231,7 @@ ul#emma-form-elements .emma-form-input{
 
 .map-line{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: auto;
 
 }
@@ -244,12 +244,13 @@ ul#emma-form-elements .emma-form-input{
 
 @media only screen and (max-width: 768px){
   .map-line{
-    max-width: 60vw;
+    max-width: 80vw;
     flex-wrap: wrap;
     justify-content: center;
   }
   .map-line .box img{
-    width: 20vw;
+    margin: 0.5rem;
+    width: 30vw;
     align-self: center;
   }
 }
