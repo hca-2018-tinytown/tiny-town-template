@@ -2,16 +2,23 @@
 /*
 Template Name: Tiny Town
 */
+function tinytown_enqueue_styles() {
+    wp_enqueue_style('tinytown-style', get_template_directory_uri() . '/tinytown-style.css');
+}
+add_action("wp_enqueue_scripts", "tinytown_enqueue_styles");
+
+function tinytown_head_tags() {
+    ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TinyTown</title>
+    <?php
+}
+add_action("wp_head", "tinytown_head_tags");
 
 get_header();
 ?>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>TinyTown</title>
-        <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/tinytown-style.css">
-    </head>
     
     <div id="primary">
 
