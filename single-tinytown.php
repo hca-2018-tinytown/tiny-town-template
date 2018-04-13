@@ -12,7 +12,7 @@ get_header();
                 <h1><?php the_title(); ?></h1>
                 
                 <p>
-                <a href="/tinytown">&LSAQUO; Back to Tiny Town</a>
+                <a href="/tinytown">&lsaquo; Back to Tiny Town</a>
                 </p>
 
                 <?php the_content(); ?>
