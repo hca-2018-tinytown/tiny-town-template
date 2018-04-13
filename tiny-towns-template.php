@@ -57,7 +57,7 @@ get_header();
 					<!-- modal starts here -->
 					<div id="emailModal" class="modal" style="display: none;">
 						<div class = "modal-content">
-							<span id="close-btn" class="close">&times; Close</span>
+							<span id="close-btn" class="close">&times<</span>
 							<h5 class = "modal-text">Take Tiny Town Home With You</h5>
 							<p>Sign up to recieve updates from the discovery center</p>
 							<?php echo do_shortcode('[emma_form]'); ?>

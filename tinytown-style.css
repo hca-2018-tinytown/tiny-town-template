@@ -143,8 +143,8 @@ h4, p{
 .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
     font-weight: bold;
+    font-size: 1.2rem;
     top: 1rem;
     right: 1rem;
     position: absolute;
@@ -200,9 +200,11 @@ h5{
   margin: 1rem 0 0.3rem 0 !important;
 }
 
-.emma-form-input{
+ul#emma-form-elements .emma-form-input{
     height: 1.5rem;
     border-radius: 0.2rem;
+    float: left !important;
+    width: 95% !important;
 }
 
 #emma-form input[type="submit"]{
