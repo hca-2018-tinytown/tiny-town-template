@@ -17,9 +17,10 @@ header{
 
 h1{
   color: #8dc740;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Impact', sans-serif;
   font-weight: normal;
   font-size: 2.5rem;
+  margin-top: 0.8rem;
 
 }
 
@@ -31,12 +32,17 @@ h4, p{
   font-family: Helvetica, sans-serif;
 }
 
+
 .title{
   border-bottom: 2px solid #8dc740;;
 }
 
 .title >  .title-texbox{
   width: 60vw;
+}
+
+.instructions{
+  margin-top: 0.5rem;
 }
 
 .map-grid{
