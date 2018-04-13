@@ -10,6 +10,10 @@ get_header();
             <?php while ( have_posts() ) : the_post(); ?>
 
                 <h1><?php the_title(); ?></h1>
+                
+                <p>
+                <a href="/tinytown">&LSAQUO; Back to Tiny Town</a>
+                </p>
 
                 <?php the_content(); ?>
 
