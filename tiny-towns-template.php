@@ -55,7 +55,7 @@ get_header();
                         <h4>Take home tinytown! Sign up for email updates!</h4>
                     </div>
 					<!-- modal starts here -->
-					<div id="emailModal" class="modal">
+					<div id="emailModal" class="modal" style="display: none;">
 						<div class = "modal-content">
 							<span id="close-btn" class = "close">&times;</span>
 							<h5 class = "modal-text">Take Tiny Town Home With You</h5>
@@ -97,6 +97,15 @@ get_header();
 	});
     });
 	</script>
-<?php 
+    <?php if($_COOKIE["TINYTOWNS_VISITED"] !== "true"): ?>
+    <script src="<?php bloginfo("template_url"); ?>/tinytown-modal.js"></script>
+    <script type="text/javascript">
+        window.addEventListener("load", function() {
+            document.querySelector("#emailModal").style.display = "initial";
+        });
+    </script>
+    <?php endif; ?>
+<?php
+setcookie("TINYTOWNS_VISITED", "true");
 get_footer();
 ?>
