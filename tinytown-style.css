@@ -231,7 +231,6 @@ ul#emma-form-elements .emma-form-input{
 
 .map-line{
   display: flex;
-  flex-flow: row;
   justify-content: space-around;
   margin: auto;
 
@@ -241,5 +240,17 @@ ul#emma-form-elements .emma-form-input{
   margin: 0.1rem;
   width: 10vw;
   align-self: center;
+}
+
+@media only screen and (max-width: 768px){
+  .map-line{
+    max-width: 60vw;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .map-line .box img{
+    width: 20vw;
+    align-self: center;
+  }
 }
 
