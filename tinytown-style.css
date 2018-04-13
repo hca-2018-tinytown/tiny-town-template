@@ -17,9 +17,10 @@ header{
 
 h1{
   color: #8dc740;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Impact', sans-serif;
   font-weight: normal;
   font-size: 2.5rem;
+  margin-top: 0.8rem;
 
 }
 
@@ -53,6 +54,10 @@ h4, p{
 
 .title >  .title-texbox{
   width: 60vw;
+}
+
+.instructions{
+  margin-top: 0.5rem;
 }
 
 .map-grid{
@@ -101,7 +106,7 @@ h4, p{
     padding: 2em;
     border: 1px solid #888;
     width: 80%; 
-    height: 40vh;
+    height: auto;
 }
 
 .close {
@@ -121,10 +126,13 @@ h4, p{
 
 h5{
   font-family: Helvetica, sans-serif;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
 }
 
 #no-thanks{
   color:#8dc740;
+  margin-top: 3rem;
 }
 
 #no-thanks:hover{
@@ -133,28 +141,48 @@ h5{
 
 
 /* Emma Form Styling */
+
+.emma-wrap{
+  padding-top: 2rem;
+}
+
 .emma-form-row{
   font-family: Helvetica;
   height: 2rem;
   font-size: 1rem;
 }
 
+.emma-form-label, .emma-form-input{
+  padding: 0.2rem;
+}
+
 .emma-form-label{
   text-transform: uppercase;
+  display: block;
+  font-size: 0.8rem;
+  width: auto !important;
+
 }
 
 .emma-form-input{
     height: 1.5rem;
-    padding: 0.2rem;
     border-radius: 0.2rem;
 }
 
 #emma-form input[type="submit"]{
-    width: 80vw;
-    color:#ddd4ce;
-    background-color: #ce661c;
-    border-radius: 0.2rem;
+    width: 100%;
+    background-color: #EC880E !important; 
+    border-radius: 0.4rem;
     height: 2rem;
+    margin: 1rem;
     text-transform: uppercase;
+}
+
+#emma-form input[type="submit"]:hover{
+  background-color: #b76909;
+}
+
+.emma-status{
+  width: auto !important;
 }
 
