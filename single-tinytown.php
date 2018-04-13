@@ -50,7 +50,7 @@ get_header();
                 <footer class="email-footer">
                     <div class = "flex-container" id="email-link">
                         <img class="email-icon" src="<?php bloginfo("template_url"); ?>/tinytown-email-icon.png" alt="Email Icon">
-                        <h4>Take home tinytown! Sign up for email updates!</h4>
+                        <h4>Take home Tiny Town! Sign up for email updates!</h4>
                     </div>
                     <!-- modal starts here -->
                     <div id="emailModal" class="modal" style="display: none;">

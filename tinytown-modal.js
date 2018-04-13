@@ -29,6 +29,7 @@ window.onclick = function (event) {
 // Open the modal when you click on the email link
 emailLink.onclick = function(){
     modal.style.display = "block";
+    header.style = "z-index: 0;";
 }
 
 // Upon submission, poll for the success or error alerts
