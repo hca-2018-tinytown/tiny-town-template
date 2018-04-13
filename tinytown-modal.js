@@ -3,6 +3,7 @@
 const modal = document.getElementById('emailModal');
 const closeBtn = document.getElementById('close-btn');
 const noThanks = document.getElementById('no-thanks');
+const emailLink = document.getElementById('email-link');
 const header = document.getElementById('header');
 
 header.style = "z-index: 0;";
@@ -25,6 +26,11 @@ window.onclick = function (event) {
     modal.style.display = "none";
     header.style = "";
   }
+}
+
+// Open the modal when you click on the email link
+emailLink.onclick = function(){
+    modal.style.display = "block";
 }
 
 // Upon submission, poll for the success or error alerts

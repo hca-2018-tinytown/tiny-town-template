@@ -97,6 +97,11 @@ h4, p{
   height: 1rem;
 }
 
+.email-icon:hover, .email-footer h4:hover{
+  color: #2b8200;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 768px) {
     /* For desktop: */
     .map-grid {
