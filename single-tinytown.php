@@ -24,9 +24,9 @@ get_header();
                 <?php the_content(); ?>
 
             <?php endwhile; // end of the loop. ?>
-
-            <div class="map-grid">
-                <?php $loop = new WP_Query( array( 'post_type' => 'tinytown', 'posts_per_page' => 10, 'orderby' => 'menu_order', 'order' => 'ASC' ) ); ?>
+            
+            <div class="map-line">
+                <?php $loop = new WP_Query( array( 'post_type' => 'tinytown', 'posts_per_page' => 10 ) ); ?>
 
                 <?php 
                     while ( $loop->have_posts() ) : $loop->the_post();
