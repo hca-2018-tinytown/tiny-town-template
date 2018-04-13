@@ -58,7 +58,7 @@ get_header();
             <div>
 				<footer class="email-footer">
                     <div class = "flex-container" id="email-link">
-                        <img class="email-icon" src="images/email-icon.png" alt="Email Icon">
+                        <img class="email-icon" src="<?php bloginfo("template_url"); ?>/tinytown-email-icon.png" alt="Email Icon">
                         <h4>Take home tinytown! Sign up for email updates!</h4>
                     </div>
 					<!-- modal starts here -->
@@ -104,9 +104,10 @@ get_header();
 	});
     });
 	</script>
-    <?php if($_COOKIE["TINYTOWNS_VISITED"] !== "true"): ?>
     <script src="<?php bloginfo("template_url"); ?>/tinytown-modal.js"></script>
+    <?php if($_COOKIE["TINYTOWNS_VISITED"] !== "true"): ?>
     <script type="text/javascript">
+        document.getElementById('header').style = "z-index: 0;";
         window.addEventListener("load", function() {
             document.querySelector("#emailModal").style.display = "initial";
         });
