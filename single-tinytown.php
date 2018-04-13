@@ -26,7 +26,7 @@ get_header();
 
                 <?php 
                     while ( $loop->have_posts() ) : $loop->the_post();
-                    $featured_img_url = get_the_post_thumbnail_url(); 
+                    $featured_img_url = get_the_post_thumbnail_url();
                 ?>
 
                     <div class="box">

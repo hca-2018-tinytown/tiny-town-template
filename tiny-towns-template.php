@@ -41,11 +41,11 @@ get_header();
             </div>
 
             <div class="map-grid">
-                <?php $loop = new WP_Query( array( 'post_type' => 'tinytown', 'posts_per_page' => 10 ) ); ?>
+                <?php $loop = new WP_Query( array( 'post_type' => 'tinytown', 'posts_per_page' => 10, 'orderby' => 'menu_order', 'order' => 'ASC' ) ); ?>
 
                 <?php 
                     while ( $loop->have_posts() ) : $loop->the_post();
-                    $featured_img_url = get_the_post_thumbnail_url(); 
+                    $featured_img_url = get_the_post_thumbnail_url();
                 ?>
 
                     <div class="box">
@@ -64,7 +64,7 @@ get_header();
 					<!-- modal starts here -->
 					<div id="emailModal" class="modal" style="display: none;">
 						<div class = "modal-content">
-							<span id="close-btn" class="close">&times<</span>
+							<span id="close-btn" class="close">&times;</span>
 							<h5 class = "modal-text">Take Tiny Town Home With You</h5>
 							<p>Sign up to recieve updates from the discovery center</p>
 							<?php echo do_shortcode('[emma_form]'); ?>
