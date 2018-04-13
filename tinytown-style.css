@@ -33,6 +33,21 @@ h4, p{
 }
 
 
+.instructions h4 {
+	font-size: 22px;
+    margin: 20px 0;
+}
+
+.instructions p {
+	font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.title,
+.instructions {
+	margin-left: 20px;
+}
+
 .title{
   border-bottom: 2px solid #8dc740;;
 }
