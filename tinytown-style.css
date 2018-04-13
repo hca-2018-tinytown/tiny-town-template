@@ -1,4 +1,3 @@
-
 nav{
   width: 100vw;
   height: 3rem;
@@ -61,6 +60,7 @@ h4, p{
   font-size: 1rem;
 }
 
+/* Map on splash page */
 .map-grid{
   display: flex;
   flex-flow: row wrap;
@@ -74,6 +74,7 @@ h4, p{
   align-self: center;
 }
 
+/* Footer on splash page  */
 .email-footer{
   padding: 2rem 3rem 0.5rem;
 }
@@ -224,5 +225,21 @@ ul#emma-form-elements .emma-form-input{
 
 .emma-status{
   width: auto !important;
+}
+
+/* Single Page Map Line */
+
+.map-line{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  margin: auto;
+
+}
+
+.map-line .box img{
+  margin: 0.1rem;
+  width: 10vw;
+  align-self: center;
 }
 

@@ -21,7 +21,7 @@ get_header();
 
             <?php endwhile; // end of the loop. ?>
 
-            <div class="map-grid">
+            <div class="map-line">
                 <?php $loop = new WP_Query( array( 'post_type' => 'tinytown', 'posts_per_page' => 10 ) ); ?>
 
                 <?php 
