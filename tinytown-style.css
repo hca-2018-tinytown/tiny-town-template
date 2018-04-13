@@ -58,6 +58,7 @@ h4, p{
 
 .instructions{
   margin-top: 0.5rem;
+  font-size: 1rem;
 }
 
 .map-grid{
@@ -112,6 +113,7 @@ h4, p{
     border: 1px solid #888;
     width: 80%; 
     height: auto;
+    position: relative;
 }
 
 .close {
@@ -119,7 +121,7 @@ h4, p{
     float: right;
     font-size: 28px;
     font-weight: bold;
-    top: 3rem;
+    top: 1rem;
     right: 1rem;
     position: absolute;
 
@@ -142,6 +144,14 @@ h5{
 #no-thanks{
   color:#3BB000;
   margin-top: 3rem;
+  font-size: 1.05rem;
+  
+}
+
+#no-thanks:hover, 
+#no-thanks:focus{
+  color: #2b8200;
+  cursor: pointer;
 }
 
 
@@ -176,13 +186,14 @@ h5{
     background-color: #D06E18 !important; 
     border-radius: 0.4rem;
     height: 2rem;
-    margin: 1rem;
+    margin: 1rem auto;
     text-transform: uppercase;
     font-size: 1rem;
 }
 
 #emma-form input[type="submit"]:hover{
-  background-color: #b76909;
+  background-color: #a75f07;
+  cursor: pointer;
 }
 
 .emma-status{

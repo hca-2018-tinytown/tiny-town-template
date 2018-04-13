@@ -58,7 +58,7 @@ get_header();
 							<h5 class = "modal-text">Take Tiny Town Home With You</h5>
 							<p>Sign up to recieve updates from the discovery center</p>
 							<?php echo do_shortcode('[emma_form]'); ?>
-							<p id="no-thanks">No,thank you, take me to Tiny Town</p>
+							<p id="no-thanks">No,thank you, take me to Tiny Town!</p>
 						</div>
 					</div>
 					<!-- modal ends here -->
