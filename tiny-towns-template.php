@@ -2,16 +2,23 @@
 /*
 Template Name: Tiny Town
 */
+function tinytown_enqueue_styles() {
+    wp_enqueue_style('tinytown-style', get_template_directory_uri() . '/tinytown-style.css');
+}
+add_action("wp_enqueue_scripts", "tinytown_enqueue_styles");
+
+function tinytown_head_tags() {
+    ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TinyTown</title>
+    <?php
+}
+add_action("wp_head", "tinytown_head_tags");
 
 get_header();
 ?>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>TinyTown</title>
-        <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/tinytown-style.css">
-    </head>
     
     <div id="primary">
 
@@ -51,7 +58,7 @@ get_header();
             <div>
 				<footer class="email-footer">
                     <div class = "flex-container" id="email-link">
-                        <img class="email-icon" src="images/email-icon.png" alt="Email Icon">
+                        <img class="email-icon" src="<?php bloginfo("template_url"); ?>/tinytown-email-icon.png" alt="Email Icon">
                         <h4>Take home tinytown! Sign up for email updates!</h4>
                     </div>
 					<!-- modal starts here -->
@@ -97,9 +104,10 @@ get_header();
 	});
     });
 	</script>
-    <?php if($_COOKIE["TINYTOWNS_VISITED"] !== "true"): ?>
     <script src="<?php bloginfo("template_url"); ?>/tinytown-modal.js"></script>
+    <?php if($_COOKIE["TINYTOWNS_VISITED"] !== "true"): ?>
     <script type="text/javascript">
+        document.getElementById('header').style = "z-index: 0;";
         window.addEventListener("load", function() {
             document.querySelector("#emailModal").style.display = "initial";
         });

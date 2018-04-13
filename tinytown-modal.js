@@ -6,8 +6,6 @@ const noThanks = document.getElementById('no-thanks');
 const emailLink = document.getElementById('email-link');
 const header = document.getElementById('header');
 
-header.style = "z-index: 0;";
-
 // Close the modal when you click on the x button
 closeBtn.onclick = function () {
   modal.style.display = "none";

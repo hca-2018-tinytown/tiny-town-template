@@ -1,9 +1,11 @@
 <?php
+function tinytown_enqueue_styles() {
+    wp_enqueue_style('tinytown-style', get_template_directory_uri() . '/tinytown-style.css');
+}
+add_action("wp_enqueue_scripts", "tinytown_enqueue_styles");
+
 get_header();
 ?>
-    <head>
-        <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/tinytown-style.css">
-    </head>
     <div id="primary">
         <div id="content" role="main">
 
