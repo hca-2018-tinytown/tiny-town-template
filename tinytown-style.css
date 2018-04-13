@@ -74,6 +74,29 @@ h4, p{
   align-self: center;
 }
 
+.email-footer{
+  padding-bottom: 1rem;
+}
+
+.email-footer > .flex-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.email-footer h4{
+  color: #3BB000;    
+  font-family: Helvetica, sans-serif;    
+  font-size: 1.05rem;    
+  font-weight: bold;    
+  line-height: 1.3rem;
+}
+
+.email-icon{
+  margin-right: 1rem;
+  height: 1rem;
+}
+
 @media only screen and (min-width: 768px) {
     /* For desktop: */
     .map-grid {
@@ -87,10 +110,6 @@ h4, p{
     }
 
 }
-.email-footer{
-  padding-bottom: 1rem;
-}
-
 
 /* email sign up modal */
 .modal {

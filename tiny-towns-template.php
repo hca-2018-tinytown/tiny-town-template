@@ -50,7 +50,10 @@ get_header();
             </div>
             <div>
 				<footer class="email-footer">
-					<h4>Take home tinytown! Sign up for email updates!</h4>
+                    <div class = "flex-container">
+                        <img class="email-icon" src="images/email-icon.png" alt="Email Icon">
+                        <h4>Take home tinytown! Sign up for email updates!</h4>
+                    </div>
 					<!-- modal starts here -->
 					<div id="emailModal" class="modal">
 						<div class = "modal-content">
