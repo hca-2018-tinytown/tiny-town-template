@@ -40,7 +40,7 @@ h4, p{
 
 .instructions p {
 	font-size: 16px;
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .title,
@@ -58,6 +58,7 @@ h4, p{
 
 .instructions{
   margin-top: 0.5rem;
+  font-size: 1rem;
 }
 
 .map-grid{
@@ -67,10 +68,38 @@ h4, p{
   margin: auto;
 }
 
-.map-grid > .box, img{
+.map-grid > .box img{
   margin: 0.1rem;
   width: 40vw;
   align-self: center;
+}
+
+.email-footer{
+  padding-bottom: 1rem;
+}
+
+.email-footer > .flex-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.email-footer h4{
+  color: #3BB000;    
+  font-family: Helvetica, sans-serif;    
+  font-size: 1.05rem;    
+  font-weight: bold;    
+  line-height: 1.3rem;
+}
+
+.email-icon{
+  margin-right: 1rem;
+  height: 1rem;
+}
+
+.email-icon:hover, .email-footer h4:hover{
+  color: #2b8200;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
@@ -78,14 +107,14 @@ h4, p{
     .map-grid {
       max-width: 65vw;
     }
-    .map-grid > .box, img{
+    .map-grid > .box img{
       width: 30vw;
     }
-}
-.email-footer{
-  padding-bottom: 1rem;
-}
+    .modal-content{
+      max-width: 33.33rem;
+    }
 
+}
 
 /* email sign up modal */
 .modal {
@@ -98,6 +127,7 @@ h4, p{
     overflow: auto; 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4); 
+    border-radius: 0.35rem;
 }
 
 .modal-content {
@@ -107,6 +137,7 @@ h4, p{
     border: 1px solid #888;
     width: 80%; 
     height: auto;
+    position: relative;
 }
 
 .close {
@@ -114,6 +145,10 @@ h4, p{
     float: right;
     font-size: 28px;
     font-weight: bold;
+    top: 1rem;
+    right: 1rem;
+    position: absolute;
+
 }
 
 .close:hover,
@@ -131,20 +166,21 @@ h5{
 }
 
 #no-thanks{
-  color:#8dc740;
+  color:#3BB000;
   margin-top: 3rem;
+  font-size: 1.05rem;
+  
 }
 
-#no-thanks:hover{
-  color: #3CB000;
+#no-thanks:hover, 
+#no-thanks:focus{
+  color: #2b8200;
+  cursor: pointer;
 }
 
 
 /* Emma Form Styling */
 
-.emma-wrap{
-  padding-top: 2rem;
-}
 
 .emma-form-row{
   font-family: Helvetica;
@@ -158,10 +194,10 @@ h5{
 
 .emma-form-label{
   text-transform: uppercase;
-  display: block;
   font-size: 0.8rem;
-  width: auto !important;
-
+  display: block !important;
+  width: 100% !important;
+  margin: 1rem 0 0.3rem 0 !important;
 }
 
 .emma-form-input{
@@ -171,15 +207,17 @@ h5{
 
 #emma-form input[type="submit"]{
     width: 100%;
-    background-color: #EC880E !important; 
+    background-color: #D06E18 !important; 
     border-radius: 0.4rem;
     height: 2rem;
-    margin: 1rem;
+    margin: 1rem auto;
     text-transform: uppercase;
+    font-size: 1rem;
 }
 
 #emma-form input[type="submit"]:hover{
-  background-color: #b76909;
+  background-color: #a75f07;
+  cursor: pointer;
 }
 
 .emma-status{

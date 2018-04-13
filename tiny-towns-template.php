@@ -57,15 +57,18 @@ get_header();
             </div>
             <div>
 				<footer class="email-footer">
-					<h4>Take home tinytown! Sign up for email updates!</h4>
+                    <div class = "flex-container" id="email-link">
+                        <img class="email-icon" src="images/email-icon.png" alt="Email Icon">
+                        <h4>Take home tinytown! Sign up for email updates!</h4>
+                    </div>
 					<!-- modal starts here -->
 					<div id="emailModal" class="modal" style="display: none;">
 						<div class = "modal-content">
-							<span id="close-btn">&times;</span>
+							<span id="close-btn" class="close">&times; Close</span>
 							<h5 class = "modal-text">Take Tiny Town Home With You</h5>
 							<p>Sign up to recieve updates from the discovery center</p>
 							<?php echo do_shortcode('[emma_form]'); ?>
-							<p id="no-thanks">No,thank you, take me to Tiny Town</p>
+							<p id="no-thanks">No,thank you, take me to Tiny Town!</p>
 						</div>
 					</div>
 					<!-- modal ends here -->
