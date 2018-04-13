@@ -12,34 +12,14 @@ get_header();
             <?php while ( have_posts() ) : the_post(); ?>
 
                 <h1><?php the_title(); ?></h1>
-                
-                <p>
-                <a href="/tinytown">&lsaquo; Back to Tiny Town</a>
-                </p>
 
-                <?php if(get_field("tinytown_content_image")):
-                    echo wp_get_attachment_image(get_field("tinytown_content_image"), "medium", false, array( "class" => "alignright tinytown-content-image" ));
+                <?php if(get_field("development_content_image")):
+                    echo wp_get_attachment_image(get_field("development_content_image"), "medium", false, array( "class" => "alignright tinytown-content-image" ));
                 endif; ?>
 
                 <?php the_content(); ?>
 
             <?php endwhile; // end of the loop. ?>
-
-            <div class="map-grid">
-                <?php $loop = new WP_Query( array( 'post_type' => 'tinytown', 'posts_per_page' => 10, 'orderby' => 'menu_order', 'order' => 'ASC' ) ); ?>
-
-                <?php 
-                    while ( $loop->have_posts() ) : $loop->the_post();
-                    $featured_img_url = get_the_post_thumbnail_url();
-                ?>
-
-                    <div class="box">
-                        <a href=<?php echo '"' . get_permalink() . '"'?>>
-                            <img src=<?php echo '"' . $featured_img_url . '"'; ?> alt="<?php the_title(); ?>">
-                        </a>
-                    </div>
-                <?php endwhile; ?>
-            </div>
 
             <div>
                 <footer class="email-footer">
