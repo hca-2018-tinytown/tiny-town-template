@@ -22,11 +22,11 @@ get_header();
             <?php endwhile; // end of the loop. ?>
 
             <div class="map-grid">
-                <?php $loop = new WP_Query( array( 'post_type' => 'tinytown', 'posts_per_page' => 10 ) ); ?>
+                <?php $loop = new WP_Query( array( 'post_type' => 'tinytown', 'posts_per_page' => 10, 'orderby' => 'menu_order', 'order' => 'ASC' ) ); ?>
 
                 <?php 
                     while ( $loop->have_posts() ) : $loop->the_post();
-                    $featured_img_url = get_the_post_thumbnail_url(); 
+                    $featured_img_url = get_the_post_thumbnail_url();
                 ?>
 
                     <div class="box">
