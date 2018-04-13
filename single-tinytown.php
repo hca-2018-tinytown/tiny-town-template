@@ -14,7 +14,7 @@ get_header();
                 <h1><?php the_title(); ?></h1>
                 
                 <p>
-                <a href="/tinytown">&lsaquo; Back to Tiny Town</a>
+                <a href="/tinytown">&lsaquo; Back to Town Central</a>
                 </p>
 
                 <?php if(get_field("tinytown_content_image")):
@@ -25,6 +25,11 @@ get_header();
 
             <?php endwhile; // end of the loop. ?>
             
+            <p>
+                <hr>
+                Tap an exhibit below to learn more about it.
+            </p>
+
             <div class="map-line">
                 <?php $loop = new WP_Query( array( 'post_type' => 'tinytown', 'posts_per_page' => 10 ) ); ?>
 
@@ -54,7 +59,7 @@ get_header();
                             <h5 class = "modal-text">Take Tiny Town Home With You</h5>
                             <p>Sign up to recieve updates from the discovery center</p>
                             <?php echo do_shortcode('[emma_form]'); ?>
-                            <p id="no-thanks">No,thank you, take me to Tiny Town!</p>
+                            <p id="no-thanks">No, thank you, take me to Tiny Town!</p>
                         </div>
                     </div>
                     <!-- modal ends here -->
