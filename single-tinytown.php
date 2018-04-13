@@ -20,7 +20,7 @@ get_header();
                 <?php the_content(); ?>
 
             <?php endwhile; // end of the loop. ?>
-
+            
             <div class="map-line">
                 <?php $loop = new WP_Query( array( 'post_type' => 'tinytown', 'posts_per_page' => 10 ) ); ?>
 
